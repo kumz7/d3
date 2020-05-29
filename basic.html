@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head>
+      <script src = "d3.v5.min.js"></script>
+   </head>
+
+   <body>
+      <script>
+          var data = [10, 20, 30, 25, 15,44,43,33,22,55,33,44]; 
+        d3.select("body").append("ul").attr("id","list");
+        d3.select("#list").selectAll("li")
+        .data(data).enter()
+        .append("li")
+        .text(function(d) 
+        { return d; });
+      </script>
+   </body>
+</html>
